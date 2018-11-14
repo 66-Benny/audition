@@ -418,12 +418,13 @@ const getRegExp = re => {
 };
 ```
 > 做好了这些准备工作,我们就可以进行深克隆的实现了.
+
 ```js
-/**
-* deep clone
-* @param  {[type]} parent object 需要进行克隆的对象
-* @return {[type]}        深克隆后的对象
-*/
+
+// * deep clone
+// * @param  {[type]} parent object 需要进行克隆的对象
+// * @return {[type]}        深克隆后的对象
+
 const clone = parent => {
   // 维护两个储存循环引用的数组
   const parents = [];
