@@ -63,6 +63,7 @@ a.sayHello(name) // Hello Bob
 > * define(id, [depends], callback) // 导出模块
 > * require([module], callback) // 导入
 #### demo
+
 ```js
 1. 新建 a.js, 输入以下内容
 // a.js
@@ -79,6 +80,7 @@ define(function() {
   }
 })
 ```
+
 ```html
 2. 在 test.html 中调用 a 模块
 // test.html
@@ -101,6 +103,7 @@ define(function() {
 </body>
 </html>
 ```
+
 >能够异步加载模块, 适合在浏览器中运行, 但是不能够按需加载, 必须提前加载模块
 
 > ### CMD
@@ -130,6 +133,7 @@ define(function(require, exports, module) {
 #### 4. 什么是闭包，如何使用它，为什么要使用它？
 >  闭包是就是函数中的函数，里面的函数可以访问外面函数的变量，外面的变量的是这个内部函数的一部分。
 > 辅助理解:
+
 ```js
 function outer(){
    var num=0;//内部变量
@@ -144,6 +148,7 @@ func1();//输出2
 var func2=outer();
 func2();// 输出1
 ```
+
 > 闭包可以用在许多地方。它的最大用处有两个，一个是前面提到的可以读取函数内部的变量，另一个就是让这些变量的值始终保持在内存中。
 <hr/>
 
@@ -660,6 +665,7 @@ var unique = (a) => [...new Set(a)]
 
 > 二 转义
 > 转换成 Boolean 时均为 false，转换成 Number 时有所不同
+
 ```js
 !!(null); // false
 !!(undefined); // false
@@ -673,7 +679,6 @@ null === undefined; //false
 
 #### 24. 常见的HTTP状态码
 > ##### HTTP的响应状态码由5段组成： 
-
 > 1xx 消息，一般是告诉客户端，请求已经收到了，正在处理，别急...
 > 2xx 处理成功，一般表示：请求收悉、我明白你要的、请求已受理、已经处理完成等信息.
 > 3xx 重定向到其它地方。它让客户端再发起一个请求以完成整个处理。
